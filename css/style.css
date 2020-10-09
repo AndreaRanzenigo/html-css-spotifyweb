@@ -5,10 +5,31 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 ,span, p {
+  color: #fff;
+}
+
+span, a, li {
+  opacity: .7;
+}
+
 .app {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* utilities */
+.text-center {
+  text-align: center;
+}
+
+.pd-left {
+  padding-left: 20px;
 }
 
 /* MAIN WINDOW */
@@ -27,8 +48,52 @@
 }
 
 .main-sidebar .sidebar-top {
-  background-color: red;
+  background-color: #000000;
   flex-grow: 1;
+}
+
+.main-sidebar .sidebar-top img {
+  max-height: 60px;
+  padding: 10px 20px;
+}
+
+.main-sidebar .sidebar-top ul {
+  list-style: none;
+}
+
+.main-sidebar .sidebar-top ul li a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.main-sidebar .sidebar-top ul li img {
+  width: 60px;
+  vertical-align: middle;
+}
+
+.main-sidebar .sidebar-top h2 {
+  font-size: 16px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+.main-sidebar .sidebar-top i {
+  background-color: grey;
+  color: #fff;
+  font-size: 30px;
+  padding: 5px 10px;
+  margin: 5px 5px 5px 20px;
+  vertical-align: middle;
+}
+
+.main-sidebar .sidebar-top span {
+  font-size: 15px;
+  opacity: .5;
+}
+
+.main-sidebar .sidebar-top ul.pd-left li a {
+  line-height: 2.5;
 }
 
 .main-sidebar .sidebar-bottom {
