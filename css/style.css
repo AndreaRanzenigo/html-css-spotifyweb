@@ -9,11 +9,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4 ,span, p {
+h1, h2, h3, h4 ,span, p, small {
   color: #fff;
 }
 
-span, a, li {
+span, a, li, small {
   opacity: .7;
 }
 
@@ -39,6 +39,14 @@ span, a, li {
 
 .pd-left {
   padding-left: 20px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mt-30 {
+  margin-top: 30px;
 }
 
 /* MAIN WINDOW */
@@ -225,10 +233,94 @@ span, a, li {
   text-decoration: none;
 }
 
+.content .scrollable .content-menu ul li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.content .scrollable .content-menu ul li::after {
+  content: "";
+  display: none;
+  background-color: green;
+  width: 25%;
+  height: 2px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content .scrollable .content-menu ul li:hover::after {
+  display: block;
+}
+
 .content .scrollable .category {
   height: 400px;
 }
 
+.content .scrollable .category .album-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.content .scrollable .category .album-list .album {
+  margin-right: 10px;
+  flex-basis: calc((100% / 6) - 10px);
+}
+
+@media screen and (max-width: 991px) {
+  .content .scrollable .category .album-list .album {
+    flex-basis: calc((100% / 3) - 10px);
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .content .scrollable .category .album-list .album {
+    flex-basis: calc((100% / 2) - 10px);
+  }
+
+}
+
+.content .scrollable .category .album-list .album img {
+  max-width: 100%;
+  width: 200px;
+}
+
+.content .scrollable .category .album-list .album h3 {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.content .scrollable .category .album-list .album small {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+}
+
+.content .scrollable .category .album-list .album .layover i {
+  color: #fff;
+  font-size: 40px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content .scrollable .category .album-list .album .layover:hover i {
+  display: block;
+}
+
+.content .scrollable .category .album-list .album .layover {
+  width: 100%;
+  position: relative;
+}
+
+.content .scrollable .category .album-list .album .layover:hover {
+  opacity: .7;
+  cursor: pointer;
+}
 /* PLAYER */
 .player {
   background-color: yellow;
