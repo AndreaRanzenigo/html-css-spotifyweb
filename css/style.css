@@ -49,6 +49,10 @@ span, a, li, small {
   margin-top: 30px;
 }
 
+.bd-radius {
+  border-radius: 50%;
+}
+
 /* MAIN WINDOW */
 .main-window {
   background-color: lightblue;
@@ -206,6 +210,11 @@ span, a, li, small {
   background-color: #000000;
 }
 
+.content .content-top .btn:hover {
+  font-size: 15px;
+  border: 2px solid #fff;
+}
+
 .content .scrollable {
   position: absolute;
   top: 0;
@@ -241,7 +250,7 @@ span, a, li, small {
 .content .scrollable .content-menu ul li::after {
   content: "";
   display: none;
-  background-color: green;
+  background-color: #2fce67;
   width: 25%;
   height: 2px;
   position: relative;
@@ -251,10 +260,6 @@ span, a, li, small {
 
 .content .scrollable .content-menu ul li:hover::after {
   display: block;
-}
-
-.content .scrollable .category {
-  height: 400px;
 }
 
 .content .scrollable .category .album-list {
@@ -323,6 +328,6 @@ span, a, li, small {
 }
 /* PLAYER */
 .player {
-  background-color: yellow;
+  background-color: #272727;
   height: 80px;
 }
