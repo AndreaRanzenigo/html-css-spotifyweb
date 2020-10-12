@@ -329,7 +329,6 @@ span, a, li, small {
 /* PLAYER */
 .player {
   background-color: #272727;
-  height: 80px;
   display: flex;
   flex-direction: row;
 }
@@ -368,7 +367,6 @@ span, a, li, small {
 }
 
 .center {
-  height: 70px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -383,10 +381,17 @@ span, a, li, small {
   color: #fff;
   padding: 15px;
   font-size: 18px;
+  opacity: .7;
 }
 
 .center .comand i:nth-child(3) {
   font-size: 30px;
+  vertical-align: middle;
+}
+
+.center .comand i:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .center .progress-bar {
@@ -399,6 +404,10 @@ span, a, li, small {
   padding: auto 30px;
 }
 
+.center .progress-bar span {
+  font-size: 13px;
+}
+
 .center .progress-bar small::after {
   content: "";
   display: inline-block;
@@ -406,19 +415,63 @@ span, a, li, small {
   height: 4px;
   background-color: #bababa;
   border-radius: 5px;
+  position: relative;
+  left: 5px;
 }
 
-.center .progress-bar apsn::before {
+.center .progress-bar span::before {
   content: "";
   display: inline-block;
   width: 300px;
   height: 4px;
   background-color: #535353;
   border-radius: 5px;
+  position: relative;
+  left: -5px;
 }
 
 .right {
-  background-color: red;
   height: 70px;
+  display: flex;
+  align-items: center;
   flex-basis: 230px;
+}
+
+.right i {
+  padding: 10px;
+  color: #fff;
+  opacity: .7;
+}
+
+.right i:hover {
+  opacity: 1;
+}
+
+.right::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background-color: #bababa;
+  border-radius: 5px;
+  position: relative;
+  left: 140px;
+}
+
+.right::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  background-color: #535353;
+  border-radius: 5px;
+  position: relative;
+  left: 20px;
+}
+
+@media screen and (max-width: 940px) {
+  .player {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
