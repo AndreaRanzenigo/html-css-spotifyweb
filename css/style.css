@@ -330,4 +330,95 @@ span, a, li, small {
 .player {
   background-color: #272727;
   height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  flex-basis: 230px;
+  display: flex;
+  align-items: center;
+}
+
+.left img {
+  width: 50px;
+  max-width: 100%;
+  margin: auto 5px;
+}
+
+.left h4{
+  display: inline-block;
+}
+
+.left small {
+  display: block;
+}
+
+.left .icon i {
+  color: #fff;
+  padding-left: 10px;
+  position: relative;
+  left: 20px;
+  opacity: .7;
+}
+
+.left .icon i:hover {
+  opacity: 1;
+  font-size: 18px;
+}
+
+.center {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.center .comand {
+  height: 35px;
+}
+
+.center .comand i {
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.center .comand i:nth-child(3) {
+  font-size: 30px;
+}
+
+.center .progress-bar {
+  height: 30px;
+  margin-top: 10px;
+
+}
+
+.center .progress-bar small {
+  padding: auto 30px;
+}
+
+.center .progress-bar small::after {
+  content: "";
+  display: inline-block;
+  width: 120px;
+  height: 4px;
+  background-color: #bababa;
+  border-radius: 5px;
+}
+
+.center .progress-bar apsn::before {
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 4px;
+  background-color: #535353;
+  border-radius: 5px;
+}
+
+.right {
+  background-color: red;
+  height: 70px;
+  flex-basis: 230px;
 }
