@@ -271,11 +271,13 @@ span, a, li, small {
 .content .scrollable .category .album-list .album {
   margin-right: 10px;
   flex-basis: calc((100% / 6) - 10px);
+  text-align: center;
 }
 
 @media screen and (max-width: 991px) {
   .content .scrollable .category .album-list .album {
     flex-basis: calc((100% / 3) - 10px);
+    text-align: center;
   }
 
 }
@@ -283,6 +285,7 @@ span, a, li, small {
 @media screen and (max-width: 700px) {
   .content .scrollable .category .album-list .album {
     flex-basis: calc((100% / 2) - 10px);
+    text-align: center;
   }
 
 }
